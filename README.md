@@ -69,3 +69,24 @@ spring.datasource.password=AthulaErpUtrip1
 
 ### How to deploy application into Heroku
 
+Since this is a Spring Boot application, it has it's own embeded server. so it's really easy to deploy into Heroku.
+Following instructions show how to deploy current application into Heroku uisng a free account.
+
+```
+cd ensembl-elastic-rest-final
+heroku login
+git init
+git add .
+git commit -m "first commit"
+heroku create
+git push heroku master
+```
+
+Now your application is up and running. Since this is a REST API, there is no any front end parts to check.
+Here's how you can check your application is working or not.
+
+#### When you use the command `heroku create` , you can get a random generated application name, eg : `nameless-lake-8055`. So you can use this name to check your application as follows : 
+
+https://nameless-lake-8055.herokuapp.com/api/elastic-test/master/track/search_advanced?text=Genes&species=homo_sapiens&type=gene&release=89&division=ensembl
+
+All you have to do is replace `nameless-lake-8055` with your application name and opne this link in your browser. If you can get a JSON output with Track information, your application is up and running.
