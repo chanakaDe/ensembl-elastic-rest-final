@@ -90,3 +90,7 @@ Here's how you can check your application is working or not.
 https://nameless-lake-8055.herokuapp.com/api/elastic-test/master/track/search_advanced?text=Genes&species=homo_sapiens&type=gene&release=89&division=ensembl
 
 All you have to do is replace `nameless-lake-8055` with your application name and opne this link in your browser. If you can get a JSON output with Track information, your application is up and running.
+
+For more information, please visit official heroku spring boot deployment documentation : 
+
+https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku
