@@ -64,7 +64,7 @@ To change MySQL database instance, you need to change following properties.
 ```
 spring.datasource.url=jdbc:mysql://138.197.117.104:3306/ensembl_new
 spring.datasource.username=root
-spring.datasource.password=AthulaErpUtrip1
+spring.datasource.password=*******
 ```
 
 ### How to deploy application into Heroku
