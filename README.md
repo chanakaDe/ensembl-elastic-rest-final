@@ -94,3 +94,16 @@ All you have to do is replace `nameless-lake-8055` with your application name an
 For more information, please visit official heroku spring boot deployment documentation : 
 
 https://devcenter.heroku.com/articles/deploying-spring-boot-apps-to-heroku
+
+### How to import data from new MySQL Track DB to Elastic-Search Instance
+
+When we are using the rest api, we need to have data stored in Elastic Search server. So this data import part is also a component of this application. When you run the application, it's also auto starting and importing data from new MySQL Track DB to Elastic Search server.
+
+So you don't need to build or re run the application again and again.
+When you run the Old database to New database convert application (https://github.com/chanakaDe/ensembl-db-convert) , you might add new records to New MySQL Track Db. Then all you have to do is go to Heroku Admin Panel (Or any other admin panel you have hosted the application) and restart the application. It's so easy. Then automatically all the data is importing to Elastic Search Server.
+
+#### Where to find data importing method ?
+
+You can get the automatically running code from followng URL :
+
+https://github.com/chanakaDe/ensembl-elastic-rest-final/blob/master/src/main/java/com/chanaka/Application.java#L37
